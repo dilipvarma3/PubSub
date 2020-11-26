@@ -21,11 +21,11 @@ public class Subscriber implements Client {
         System.out.println("Show all messages under the topics subscribed by subscriber#" + id);
         for (Topic topic: subscriptions) {
             System.out.println("Topic: " + topic.getTopicName());
-            System.out.println("----------------------------------------------");
+            System.out.println("------------------------------------------------------------------------------------------");
             for (Message m : topic.getMessageList()) {
                 System.out.println(m.getTitle());
             }
-            System.out.println("----------------------------------------------");
+            System.out.println("------------------------------------------------------------------------------------------");
         }
     }
 

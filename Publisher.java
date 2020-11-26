@@ -25,10 +25,9 @@ public class Publisher implements Client {
      * The publisher can publish a message at a time under a certain topic selected from different topics.
      * Subscriber that subscribe to a topic then receive messages under that topic.
      */
-    public synchronized void publishMessage(Topic topic) {
+    public synchronized void publishMessage(Topic topic) {          
         MESSAGE_ID += 1;
         topic.addToMessageList(message);
-        System.out.println("Published message with id and title:" + message + " under topic: " + topic.toString());
     }
 
     @Override
